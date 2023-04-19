@@ -1,0 +1,27 @@
+Entry Point ==> index.js
+React Works on VDOM ==>
+    DOM ==> Document Object Modal
+        ==> Access the element of HTML Code
+        ==> CSS (selector) & JavaScript (document)
+        ==> Root Element (html)
+    
+    VDOM
+        root ==> Root Element (div id=root)
+        inject our code 
+            Code <==> VDOM (all operations) ====> DOM
+            Code <==> VDOM (all operations) <==== DOM
+
+When We Import From Node Module "moduleName"
+When We Import Self Created Module "./moduleName"
+
+
+React Component
+    # basic building block of react
+    # re-use
+    # 
+State & Props
+User App
+    New Create A user
+    Print User
+    Edit User
+    Delete User
