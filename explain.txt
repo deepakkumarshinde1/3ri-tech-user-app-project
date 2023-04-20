@@ -18,8 +18,34 @@ When We Import Self Created Module "./moduleName"
 React Component
     # basic building block of react
     # re-use
-    # 
-State & Props
+    # It Must Always Start with Capital Letter
+    # single parent i.e div or <> </>
+    # <> </> ==> JSX Fragment
+    # class => className
+    # for ==> htmlFor 
+    # {this.text} ==> JSX expression
+
+State => 
+    # handel component data.
+    # when a state changes component re-render
+    # class component come with in build state
+    # in class this.state ==> readonly
+    # in class to update a state ==> setState
+    # state are mutable in nature
+
+Props =>
+    # send data from parent to child
+    # in class, props are spacial object of class
+    # props handles a data which we received from parent
+    # you will not able change the prop in child component
+    # prop are immutable in nature
+    # send data of type string, number , boolean , array , object , function
+
+Looping 
+    ==> Array ==> .map()
+
+React Lifecycle in class component
+
 User App
     New Create A user
     Print User

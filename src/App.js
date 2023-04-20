@@ -1,8 +1,17 @@
-import logo from "./logo.svg";
-import "./App.css";
+// import is optional
 
-function App() {
-  return <h1>Hello and Welcome to Project</h1>;
-}
+import User from "./components/User";
+import UserCLass from "./components/UserClass";
 
+// function component
+// logic
+let App = () => {
+  return (
+    <>
+      <UserCLass newText="Welcome Suraj" value2="sample" />
+    </>
+  );
+};
+
+// export
 export default App;
