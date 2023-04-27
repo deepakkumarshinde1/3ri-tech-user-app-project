@@ -1,0 +1,21 @@
+public 
+    index.html
+    all images
+    manifest.json
+    robots.txt
+    favicon
+
+src
+    all js files
+    all css files
+    all css background image
+    all css fonts
+    all app testing files
+
+Next Session
+    React Component
+    Class & Functional 
+    States & Props
+
+https://medium.com/@ashenkavinda/basics-of-reactjs-79107d19adfb#:~:text=React%20creates%20an%20in%2Dmemory,renders%20components%20that%20actually%20change.
+https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-1-a12e1833fdc

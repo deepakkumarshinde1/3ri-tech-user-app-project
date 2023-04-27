@@ -1,0 +1,24 @@
+https://medium.com/codex/8-npm-commands-you-need-to-know-as-a-developer-de1a733ff66a
+https://medium.com/techtalkers/getting-started-with-node-js-2c8d83b5a4f6
+
+javascript variables
+loop
+operators
+if .else
+switch
+ () ? : ( turnery operators)
+function 
+callback function*
+()=>{}*
+this*
+
+ES6 
+    class
+    generators* (redux-saga)
+    destructuring*
+    spread operators*
+    rest params*
+    default params*
+    promises* (async / await)
+    api call ( fetch() )
+

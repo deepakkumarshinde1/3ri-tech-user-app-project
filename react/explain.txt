@@ -1,0 +1,36 @@
+https://create-react-app.dev/
+
+React JS is a Library ==> User Interface ==> Flux
+    V => View
+    # JavaScript or  # TypeScript
+    Class or Function
+    Upgrade ==> 17  ==> 18 (1 line)
+
+    Learn Other Lib
+
+# Create a react project
+    Node JS ==> Development Server 
+    Build a Product App ==> Independent to run
+
+    npm 9.5.1 => Node Package Manager
+        When we create a project 
+            => add package , remove package , update package
+
+        npm install/i <package>
+        npm uninstall/un <package>
+        npm update <package>
+
+
+# 1st react app
+    npx create-react-app app-name
+
+    create-react-app ==> cra-template => bailor project (20% base) & 80% 
+
+    package.json ==> project meta file
+
+
+    Installing 
+        react => main lib,
+        react-dom => ,
+        react-scripts ==> run , build , test
+            with cra-template
