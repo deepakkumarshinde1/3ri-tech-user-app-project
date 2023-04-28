@@ -1,5 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 const UserList = (props) => {
   let { users, removeUser } = props;
+  let navigate = useNavigate();
   return (
     <>
       <section className="row">
@@ -18,27 +21,43 @@ const UserList = (props) => {
               </tr>
             </thead>
             <tbody>
-              {users.map((user, index) => {
-                return (
-                  <tr>
-                    <th>{index + 1}</th>
-                    <td>{user.fullName}</td>
-                    <td>{user.email}</td>
-                    <td>{user.gender}</td>
-                    <td>
+              {users.length == 0 ? (
+                <tr>
+                  <td colSpan={6}>
+                    <p className="text-center">
+                      No User Found{" "}
                       <button
-                        className="btn btn-danger btn-sm"
-                        onClick={() => removeUser(index)}
+                        className="btn btn-sm btn-primary"
+                        onClick={() => navigate("/user/add")}
                       >
-                        <i className="fa fa-trash"></i>
+                        Add New
                       </button>
-                      <button className="btn btn-primary mx-2 btn-sm">
-                        <i className="fa fa-edit"></i>
-                      </button>
-                    </td>
-                  </tr>
-                );
-              })}
+                    </p>
+                  </td>
+                </tr>
+              ) : (
+                users.map((user, index) => {
+                  return (
+                    <tr>
+                      <th>{index + 1}</th>
+                      <td>{user.fullName}</td>
+                      <td>{user.email}</td>
+                      <td>{user.gender}</td>
+                      <td>
+                        <button
+                          className="btn btn-danger btn-sm"
+                          onClick={() => removeUser(index)}
+                        >
+                          <i className="fa fa-trash"></i>
+                        </button>
+                        <button className="btn btn-primary mx-2 btn-sm">
+                          <i className="fa fa-edit"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  );
+                })
+              )}
             </tbody>
           </table>
         </section>

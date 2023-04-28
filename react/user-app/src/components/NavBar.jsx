@@ -1,13 +1,17 @@
+import { Link, NavLink } from "react-router-dom";
+
 const NavBar = (props) => {
+  let activeClass =
+    "nav-link text-primary border-bottom border-primary border-1";
   return (
     <>
       <section className="row">
         <section className="col-12 border-bottom border-2 border-primary">
           <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-              <a className="navbar-brand text-primary fw-bold" href="#">
+              <Link className="navbar-brand text-primary fw-bold" to="/">
                 <i className="fa fa-users"></i> User App
-              </a>
+              </Link>
               <button
                 className="navbar-toggler"
                 type="button"
@@ -25,14 +29,25 @@ const NavBar = (props) => {
               >
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                   <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">
+                    <NavLink
+                      className={({ isActive }) =>
+                        isActive ? activeClass : "nav-link "
+                      }
+                      aria-current="page"
+                      to="/user/list"
+                    >
                       <i className="fa fa-home"></i> Home
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <NavLink
+                      className={({ isActive }) =>
+                        isActive ? activeClass : "nav-link "
+                      }
+                      to="/user/add"
+                    >
                       <i className="fa fa-user-plus"></i> Add User
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </div>

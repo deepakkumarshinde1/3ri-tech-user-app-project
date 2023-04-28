@@ -4,12 +4,15 @@ import NavBar from "./components/NavBar";
 import UserList from "./components/UserList";
 import { useState } from "react";
 import Alert from "./popups/sweetAlert";
+import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
+import PageNotFound from "./components/PageNotFound";
 
 let App = () => {
   // make data centralized (single source of truth)
   // #1 move data/ functionality to App.js
   // #2 Use Context API (react)
   // #3 Use Redux (lib)
+  let navigate = useNavigate();
   let [users, setUsers] = useState([]);
 
   let initialValue = {
@@ -45,6 +48,8 @@ let App = () => {
       setNewUser({
         ...initialValue,
       });
+      // navigate to home page
+      navigate("/user/list");
     });
   };
 
@@ -72,12 +77,27 @@ let App = () => {
     <>
       <main className="container-fluid">
         <NavBar />
-        <AddUser
-          saveUser={saveUser}
-          inputChange={inputChange}
-          newUser={newUser}
-        />
-        <UserList users={users} removeUser={removeUser} />
+        <Routes>
+          <Route path="/" element={<Navigate to="/user/list" />} />
+
+          <Route
+            path="/user/list"
+            element={<UserList users={users} removeUser={removeUser} />}
+          />
+
+          <Route
+            path="/user/add"
+            element={
+              <AddUser
+                saveUser={saveUser}
+                inputChange={inputChange}
+                newUser={newUser}
+              />
+            }
+          />
+
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
       </main>
     </>
   );

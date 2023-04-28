@@ -122,3 +122,19 @@ create a user
 
 # print a list in react
     array ==> map() == return <JSX code>
+
+
+# routing
+    # react-router-dom ==> v6.9
+        # component
+            BrowserRouter => parent component
+            Routes
+            Route
+            Link  ==> SPA ==> Compo UI
+            NavLink
+            Navigation
+            Outlet
+        # hooks
+            useParams
+            useParamsString
+            useNavigate ==> JavaScript
