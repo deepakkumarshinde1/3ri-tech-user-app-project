@@ -26,6 +26,7 @@
 
     print in table
     Convert a table to Grid View like this https://codepen.io/html_tamizhan/pen/ExvBOMe
+    delete product
     
     
 

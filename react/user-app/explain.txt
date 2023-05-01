@@ -138,3 +138,27 @@ create a user
             useParams
             useParamsString
             useNavigate ==> JavaScript
+
+
+
+****************************** Redux *****************************************
+Redux Lib ==> State & Data management
+
+Props Drilling
+    App js ==== props ====> Add User
+    App js ==== props ====> User List
+    App js ==== props ====> User Edit
+
+React Context API (small)
+Redux (large)
+    
+    click a button ====> Dispatch(  action ) ===> Reducer == changes => Store (state) ===> next operations
+
+   #1 npm install @reduxjs/toolkit
+            store , reducer , action
+            
+   #2 npm install react-redux
+            hit dispatch 
+            get state from redux
+    
+
