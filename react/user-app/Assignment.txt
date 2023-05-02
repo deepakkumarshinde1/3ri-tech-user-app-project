@@ -28,5 +28,7 @@
     Convert a table to Grid View like this https://codepen.io/html_tamizhan/pen/ExvBOMe
     delete product
     
-    
+#4 Create a update/edit operation for user app
+    Use redux/toolkit for this
+    Use url to get a edit user id
 

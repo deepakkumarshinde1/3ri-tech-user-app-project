@@ -161,4 +161,15 @@ Redux (large)
             hit dispatch 
             get state from redux
     
+    #3 created slice
+    #4 exported reducer from slice
+    #5 combine reducer
+    #6 exported combine reducer
+    #7 create store
+    #8 exported store
 
+    store in react app ==> <Provider store /> ==> react-redux
+
+    action method is same as reducers method in slice
+    
+    action type will be slice/actionMethodName

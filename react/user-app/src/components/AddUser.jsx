@@ -1,5 +1,35 @@
-const AddUser = (props) => {
-  let { saveUser, inputChange, newUser } = props;
+import { useDispatch, useSelector } from "react-redux";
+import { inputChange, resetFrom, saveUser } from "../redux/UserReducers";
+import Alert from "../popups/sweetAlert";
+import { useNavigate } from "react-router-dom";
+
+const AddUser = () => {
+  let dispatch = useDispatch();
+  let navigate = useNavigate();
+  let { newUser } = useSelector((state) => state.user);
+
+  // how states from redux ==> useSelector( (state) =>sate )
+  let _inputChange = (event) => {
+    dispatch(
+      inputChange({ name: event.target.name, value: event.target.value })
+    );
+    // dispatch ===> useDispatch react-redux
+  };
+
+  let _saveUser = (event) => {
+    event.preventDefault();
+    // call save user
+    dispatch(saveUser());
+    Alert.fire({
+      title: "Success",
+      text: "User Added Successfully.",
+      icon: "success",
+    }).then(() => {
+      dispatch(resetFrom());
+      // navigate to home page
+      navigate("/user/list");
+    });
+  };
   return (
     <>
       <section className="row">
@@ -8,13 +38,13 @@ const AddUser = (props) => {
             <i className="fa fa-user-plus text-success"></i> Add User
           </p>
           <section className="card m-3 p-3 border border-success">
-            <form onSubmit={saveUser}>
+            <form onSubmit={_saveUser}>
               <div className="mb-3">
                 <label htmlFor="full_name" className="form-label">
                   Full Name
                 </label>
                 <input
-                  onChange={inputChange}
+                  onChange={_inputChange}
                   type="text"
                   className="form-control"
                   id="full_name"
@@ -29,7 +59,7 @@ const AddUser = (props) => {
                   Email
                 </label>
                 <input
-                  onChange={inputChange}
+                  onChange={_inputChange}
                   type="text"
                   className="form-control"
                   id="email"
@@ -44,7 +74,7 @@ const AddUser = (props) => {
                   Mobile
                 </label>
                 <input
-                  onChange={inputChange}
+                  onChange={_inputChange}
                   type="text"
                   className="form-control"
                   id="mobile"
@@ -59,7 +89,7 @@ const AddUser = (props) => {
                   Address
                 </label>
                 <textarea
-                  onChange={inputChange}
+                  onChange={_inputChange}
                   className="form-control"
                   id="address"
                   value={newUser.address}
@@ -79,7 +109,7 @@ const AddUser = (props) => {
                     value="Male"
                     id="male"
                     name="gender"
-                    onChange={inputChange}
+                    onChange={_inputChange}
                     checked={newUser.gender === "Male" ? true : false}
                   />
                   <label className="form-check-label" htmlFor="male">
@@ -93,7 +123,7 @@ const AddUser = (props) => {
                     value="Female"
                     id="female"
                     name="gender"
-                    onChange={inputChange}
+                    onChange={_inputChange}
                     checked={newUser.gender === "Female" ? true : false}
                   />
                   <label className="form-check-label" htmlFor="female">
@@ -107,7 +137,7 @@ const AddUser = (props) => {
                   City
                 </label>
                 <select
-                  onChange={inputChange}
+                  onChange={_inputChange}
                   type="text"
                   className="form-select"
                   id="city"

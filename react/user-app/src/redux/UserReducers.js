@@ -16,5 +16,25 @@ const UserSlice = createSlice({
     users: [],
     newUser: { ...userDefaultData },
   },
-  reducers: {},
+  reducers: {
+    inputChange: (state, action) => {
+      let { name, value } = action.payload;
+      console.log(name, value);
+      state.newUser[name] = value;
+    },
+    saveUser: (state) => {
+      state.users.push({ ...state.newUser }); // added user
+    },
+    resetFrom: (state) => {
+      state.newUser = { ...userDefaultData };
+    },
+    deleteUser: (state, action) => {
+      let { id } = action.payload;
+      state.users.splice(id, 1); // index , deleteCount
+    },
+  },
 });
+
+export default UserSlice.reducer;
+export const { inputChange, saveUser, resetFrom, deleteUser } =
+  UserSlice.actions;

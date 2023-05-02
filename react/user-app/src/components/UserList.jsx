@@ -1,8 +1,31 @@
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { deleteUser } from "../redux/UserReducers";
+import Alert from "../popups/sweetAlert";
 
 const UserList = (props) => {
-  let { users, removeUser } = props;
+  let dispatch = useDispatch();
+  let { users } = useSelector((state) => state.user);
   let navigate = useNavigate();
+  let _removeUser = (id) => {
+    Alert.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, delete it!",
+      cancelButtonText: "No, cancel!",
+      reverseButtons: true,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // delete
+        dispatch(deleteUser({ id: id }));
+        // call delete user
+
+        Alert.fire("Deleted!", "User Deleted Successfully", "success");
+      }
+    });
+  };
   return (
     <>
       <section className="row">
@@ -38,7 +61,7 @@ const UserList = (props) => {
               ) : (
                 users.map((user, index) => {
                   return (
-                    <tr>
+                    <tr key={index}>
                       <th>{index + 1}</th>
                       <td>{user.fullName}</td>
                       <td>{user.email}</td>
@@ -46,7 +69,7 @@ const UserList = (props) => {
                       <td>
                         <button
                           className="btn btn-danger btn-sm"
-                          onClick={() => removeUser(index)}
+                          onClick={() => _removeUser(index)}
                         >
                           <i className="fa fa-trash"></i>
                         </button>
