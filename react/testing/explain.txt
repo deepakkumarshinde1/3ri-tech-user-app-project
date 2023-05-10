@@ -1,0 +1,33 @@
+# Application Will Be Bug Free
+# Application Can be build for production 
+# Test each and every functions
+# jest / react-testing-lib
+    unit testing
+    functional testing
+    integrated testing
+
+
+# src 
+    test.js
+
+# add packages in dev environment
+# write 
+    unit testing ==> small part (inside a component testing  h1 text)
+    functional testing  ==> inside a component btn-click test h1 text
+    integrated testing ==> btn 1st component & h1 2nd component
+
+# render, screen  from '@testing-library/react'
+    render component for testing
+    screen i.e pick element/elements and the we assert them
+
+    test case 
+        create a test case we use a test function of jest called as 
+            test('case title', ()=>{})
+            it('case title', ()=>{})
+
+    app (todo-app)
+    screen.queryMethods()
+    assert.methods()
+    events
+    api testing
+    react-redux & saga testing 

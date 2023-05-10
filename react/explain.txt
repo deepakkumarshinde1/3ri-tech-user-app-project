@@ -34,3 +34,26 @@ React JS is a Library ==> User Interface ==> Flux
         react-dom => ,
         react-scripts ==> run , build , test
             with cra-template
+
+# redux saga
+    npm install redux-saga
+
+    call ==> run api
+    put (dispatch) ==> call a action of redux 
+    takeEvery ==> search send all the request server
+    takeLatest ==> send only latest api request
+    all ==> run different api in parallel way
+        / user
+        / product
+
+    takeEvery
+        /product ==> run
+        /product ==> run
+        /product ==> run
+        /product ==> run
+
+    takeLatest
+        /product ==> cancel
+        /product ==> cancel
+        /product ==> cancel
+        /product ==> run
