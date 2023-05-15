@@ -1,0 +1,164 @@
+Entry Point ==> index.js
+React Works on VDOM ==>
+    DOM ==> Document Object Modal
+        ==> Access the element of HTML Code
+        ==> CSS (selector) & JavaScript (document)
+        ==> Root Element (html)
+    
+    VDOM
+        root ==> Root Element (div id=root)
+        inject our code 
+            Code <==> VDOM (all operations) ====> DOM
+            Code <==> VDOM (all operations) <==== DOM
+
+When We Import From Node Module "moduleName"
+When We Import Self Created Module "./moduleName"
+
+
+React Component
+    # basic building block of react
+    # re-use
+    # It Must Always Start with Capital Letter
+    # single parent i.e div or <> </>
+    # <> </> ==> JSX Fragment
+    # class => className
+    # for ==> htmlFor 
+    # {this.text} ==> JSX expression
+
+State => 
+    # handel component data.
+    # when a state changes component re-render
+    # class component come with in build state
+    # in class this.state ==> readonly
+    # in class to update a state ==> setState
+    # state are mutable in nature
+
+Props =>
+    # send data from parent to child
+    # in class, props are spacial object of class
+    # props handles a data which we received from parent
+    # you will not able change the prop in child component
+    # prop are immutable in nature
+    # send data of type string, number , boolean , array , object , function
+
+Looping 
+    ==> Array ==> .map()
+
+React Lifecycle in class component
+    Component
+        initial => constructor
+        load ==> mounting ==> run only once
+        update ==> changes ==> update state => updating
+        unload ==> unmounting ==> run only once
+
+User App
+    New Create A user
+    Print User
+    Edit User
+    Delete User
+
+// Pure component will run when props will be get update
+
+
+Function Component
+    # less
+    # no need to this keyword
+    # they have default state like class
+
+    Class  < 16.8 > Function (Hooks)
+
+    # Hooks ==> React Method Which runs only functional component
+            ==> They can solve complex problems like class component 
+            ==> Hooks always starts "use"
+            ==> state ==> useState()
+
+            3 hooks ==> React inbuilt => useState()
+                    ==> Custom Hooks => useUserContext()
+                    ==> 3rd party hooks => redux => useDispatch
+
+functional Component
+    Props & Lifecycle
+    From Handling
+
+If you want convert a functional component to pure component
+    memo ==> component ==> we use warp other component 
+    memo is higher order component
+
+functional Component Lifecycle
+    initial
+    load ===> mounting ==> useEffect
+    update ==> updating ==> useEffect
+    unload ==> unmounting ==> useEffect
+
+    useEffect() ==> its hooks which runs side effect
+                ==> its can run on state change
+
+    useEffect(callbackFn, dependencyArray)
+
+Using CSS in Bootstrap 
+    class ==> className
+    
+   
+
+https://ramgopalpatel.github.io/mywebsite/
+567903
+
+price
+customer rate
+offer discount
+AVAILABILITY
+
+create a user 
+    name
+    email
+    mobile
+    address
+    pin code
+    gender
+    city
+    password
+    confirm password
+
+
+# print a list in react
+    array ==> map() == return <JSX code>
+
+
+# routing
+    # react-router-dom ==> v6.9
+        # component
+            BrowserRouter => parent component
+            Routes
+            Route
+            Link  ==> SPA ==> Compo UI
+            NavLink
+            Navigation
+            Outlet
+        # hooks
+            useParams  /product/:id 
+            useParamsString
+            useNavigate ==> JavaScript
+
+
+
+****************************** Redux *****************************************
+Redux Lib ==> State & Data management
+
+Props Drilling
+    App js ==== props ====> Add User
+    App js ==== props ====> User List
+    App js ==== props ====> User Edit
+
+React Context API (small)
+Redux (large)
+    
+    click a button ====> Dispatch(  action ) ===> Reducer == changes => Store (state) ===> next operations
+
+   #1 npm install @reduxjs/toolkit
+            store , reducer , action
+            
+   #2 npm install react-redux
+            hit dispatch 
+            get state from redux
+    
+
