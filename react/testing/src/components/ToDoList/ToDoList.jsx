@@ -4,7 +4,7 @@ const ToDoList = (props) => {
       <ul className="list-group">
         {props.toDoList.map((todo, index) => {
           return (
-            <li key={index} className="list-group-item">
+            <li key={index} className="list-group-item" title="list-item">
               {todo}
             </li>
           );

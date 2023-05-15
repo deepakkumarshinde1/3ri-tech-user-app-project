@@ -1,0 +1,32 @@
+#1 Create One Button
+    On click of button => CREATE color hex code
+        0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f  => 6 char
+        change h1 background color with new hex code
+
+#2 Create User Form 
+    Full Name
+    Mobile No
+    Email Id
+    Gender (radio)
+    City (select)
+    address (textarea)
+
+    On Submit Save Data
+    Print Data in Table
+
+#3  Create a product Management With routing
+    "id": new Date.now(),
+    title
+    price
+    description
+    category (drop down)
+    rating
+    rate
+    count
+
+    print in table
+    Convert a table to Grid View like this https://codepen.io/html_tamizhan/pen/ExvBOMe
+    delete product
+    
+    
+

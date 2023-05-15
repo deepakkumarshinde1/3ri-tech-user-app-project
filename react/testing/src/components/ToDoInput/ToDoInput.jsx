@@ -16,6 +16,7 @@ const ToDoInput = (props) => {
             />
             <button
               className="input-group-text btn btn-primary"
+              data-testid="save-button"
               onClick={saveToDo}
             >
               Save

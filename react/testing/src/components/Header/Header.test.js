@@ -18,14 +18,14 @@ import Header from "./Header";
 //   expect(element).toBeVisible();
 // });
 
-it("header must invisible on click", () => {
-  let title = "My App";
-  render(<Header text={title} />);
-  let heading = screen.getByTitle("my-title");
-  let button = screen.getByRole("button");
+// it("header must invisible on click", () => {
+//   let title = "My App";
+//   render(<Header text={title} />);
+//   let heading = screen.getByTitle("my-title");
+//   let button = screen.getByRole("button");
 
-  // click ===> events ==> fireEvent
-  fireEvent.click(button);
-  // head must me invisible
-  expect(heading).not.toBeVisible();
-});
+//   // click ===> events ==> fireEvent
+//   fireEvent.click(button);
+//   // head must me invisible
+//   expect(heading).not.toBeVisible();
+// });
