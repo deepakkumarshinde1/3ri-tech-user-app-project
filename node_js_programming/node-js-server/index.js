@@ -1,5 +1,6 @@
 // const http = require("http");
-import http from "http";
+const http = require("http");
+const getHTMLFile = require("./readHtmlFile");
 
 // create a server
 // browser == request ==> Server
@@ -13,15 +14,15 @@ let server = http.createServer(async (request, response) => {
         break;
 
       case "/contact-us":
-        response.write("Contact Us Page ");
+        response.write(await getHTMLFile("contact-us.html"));
         break;
 
       case "/about":
-        response.write("About Us Page ");
+        response.write(await getHTMLFile("about-us.html"));
         break;
 
       case "/products":
-        response.write("Product Page ");
+        response.write(await getHTMLFile("product.html"));
         break;
 
       default:
@@ -37,11 +38,3 @@ const PORT = 3001;
 server.listen(PORT, () => {
   console.log("server started at port ", PORT);
 });
-
-// read a file by using fs
-import fs from "fs";
-async function getHTMLFile(fileName = "404.html") {
-  let path = "./public/" + fileName;
-  let data = fs.readFileSync(path);
-  return Promise.resolve(data);
-}

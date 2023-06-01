@@ -20,3 +20,13 @@ work with module , we need to import module
 # how create basic node js server
 # how to create routing in basic node json
 # nodemon
+
+MVC => Model (data mange) , View (UI), Controller (Project Flow)
+framework ( Express JS [MVC] )
+    # file uploading
+    # add data 
+    # session handling (login)
+    # css / js 
+    # security token
+
+base 25% 
