@@ -1,34 +1,41 @@
-import { useEffect, useRef } from "react";
+import {
+  forwardRef,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+  useState,
+} from "react";
 
-function Input(props) {
-  let inputRef = useRef();
-
-  let submit = () => {
-    // inputRef.current.value = "deepak";
-    inputRef.current.style.backgroundColor = "red";
-    inputRef.current.style.fontSize = "30px";
-
-    let value = inputRef.current.value;
-    alert(value);
+function Input(props, ref) {
+  let labelRef = useRef();
+  let getLabelText = () => {
+    // logic
+    return labelRef.current.innerHTML;
   };
-  useEffect(() => {
-    inputRef.current.addEventListener("keyup", (event) => {
-      console.log(event.keyCode);
-    });
-  }, []);
+  useImperativeHandle(ref, () => {
+    return {
+      getMyValue() {
+        return getLabelText();
+      },
+      setLabelText(text) {
+        labelRef.current.innerHTML = text;
+      },
+    };
+  });
+
+  // 1 ==> true
+  // 0 ==> false
+  // if(1 == true)
   return (
     <>
       <center>
-        <input
-          ref={inputRef}
-          type="text"
-          placeholder="This is a input"
-          id="input"
-        />
-        <button onClick={submit}>Submit</button>
+        <label htmlFor="" ref={labelRef}>
+          Enter Input
+        </label>
+        <input ref={ref} type="text" placeholder="This is a input" id="input" />
       </center>
     </>
   );
 }
 
-export default Input;
+export default forwardRef(Input);

@@ -1,8 +1,8 @@
-import Input from "./components/Input";
+import Child from "./components/Child";
 function App() {
   return (
     <>
-      <Input />
+      <Child />
     </>
   );
 }

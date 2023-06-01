@@ -1,0 +1,22 @@
+default node js async in nature
+works on event-driven non-blocking i/o
+
+module structure
+    native module (already in node js) fs , path , http , https , events , url
+    custom module ( developer ) login , logout , user , admin , finance
+    3rd party module ( other organization ) react , angular , vue , express
+
+package.json
+    ==> confutation file for application.
+    ==> npm init / npm init -y
+
+work with module , we need to import module
+    es5
+        const http = require('http')
+
+    es6
+        import http from 'http'
+
+# how create basic node js server
+# how to create routing in basic node json
+# nodemon
