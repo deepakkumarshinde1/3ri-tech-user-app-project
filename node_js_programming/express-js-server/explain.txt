@@ -1,0 +1,24 @@
+# your can create a server in minimum line of code.
+# in-build routing.
+# express a spacial middleware called as "use()".
+# express supports static files like (images, css , js file, fonts).
+# express support rendering engines.
+
+
+Assignment
+    HTML + CSS + Bootstrap 
+    Create UI
+        login page
+            email
+            password
+        registration page
+            name
+            email
+            gender
+            image
+            address
+            city
+            password
+            confirm password
+        user dashboard (basic details)
+            todo list ui
