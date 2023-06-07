@@ -4,7 +4,10 @@
 # express supports static files like (images, css , js file, fonts).
 # express support rendering engines.
 
-
+Framework ==> M (model) V (view) C (controller)
+M (model) =>represents data or it communicates with db
+V (view) => UI 
+C (controller) => its intermediate in between model & view
 Assignment
     HTML + CSS + Bootstrap 
     Create UI
